@@ -4,9 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/* Import redux */
+import { Provider } from "react-redux";
+import lison_store from "./store/store";
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* On met l'app dans le Provider; ce qui permet de le propager dans l'application */}
+    <Provider store={lison_store}>
+      <App />
+    </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
