@@ -22,12 +22,12 @@ export const counterReducer = (state = initialState, action) => {
                 ...state,
                 count: state.count + action.payload
             };
-        case COUNTER_INCREMENT:
+        case COUNTER_DECREMENT:
             return {
                 ...state,
                 count: state.count - action.payload
             };
-        case COUNTER_INCREMENT:
+        case COUNTER_RESET:
             return {
                 ...state,
                 count: initialState.count /* Ou 0, tout simplement */
